@@ -1,0 +1,52 @@
+ALGORITHM Sentences
+VAR
+    str : STRING;
+    nbrW, nbrV, i: INTEGER;
+BEGIN
+    Write("Write a sentence");
+    Read(str);
+
+    nbrV := 0; //number of vowels
+    nbrW := 1; //number of words
+    str := ToUpper(str);
+
+    FOR i FROM 2 to str.length-2 STEP 1 DO
+        IF (str[i] ='') THEN
+            nbrW := nbrW + 1;
+        END_IF
+        IF str[i] in ('A','E','O','U','I') THEN
+            nbrV := nbrV + 1;
+
+END
+
+ALGORITHM sum
+VAR
+    set1 , set2 : ARRAY_OF INTEGER[length];
+    i, sum:INTEGER;
+BEGIN
+    Write ("write first set");
+    Read(set1);
+    Write ("write second set");
+    Read(set2);
+
+    sum:= 0;
+
+    FOR i FROM 1 TO str1.length STEP 1  DO
+        IF (str1[i] in (str2)) THEN
+            BREAK
+            ELSE
+                sum := sum + str1[i]
+            END_IF
+        END_IF 
+    END_FOR
+    FOR i FROM 1 TO str2.length STEP 1  DO
+        IF (str2[i] in (str1)) THEN
+            BREAK
+            ELSE
+                sum := sum + str2[i]
+            END_IF
+        END_IF 
+    END_FOR
+
+    Write('the sum of distinct elements is : ', sum);
+END
